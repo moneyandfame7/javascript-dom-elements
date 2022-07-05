@@ -1,0 +1,232 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #fff;
+  background-color: #1a1a1d;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* WRAPPER */
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 0 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 500px;
+}
+.wrapper__inner {
+  width: 80%;
+}
+.wrapper:nth-child(2n) {
+  background-color: #e3e2d8;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.container__clicker {
+  width: 50%;
+  text-align: center;
+}
+.container__clicker .container__button {
+  font-size: 16px;
+  padding: 10px 50px;
+}
+.container__title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.container__counter {
+  color: #a3a3a3;
+
+  font-size: 19px;
+  margin: 10px 0;
+}
+
+/* CONTAINER__BUTTON */
+.container__button {
+  font-size: 14px;
+  font-family: Roboto;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 10px;
+  background-color: #4e4e50;
+  color: #fff;
+}
+.container__button:hover {
+  background-color: #e3e2d8;
+  cursor: pointer;
+}
+
+/* CONTAINER__ADDER */
+.container__adder {
+  width: 600px;
+  text-align: center;
+}
+.container__text {
+  font-size: 14px;
+  color: #a3a3a3;
+  margin: 10px 0;
+  text-transform: uppercase;
+
+  text-align: center;
+}
+
+/* CONTAINER__ERROR */
+.container__adder__error {
+  width: 200px;
+  bottom: 25px;
+  right: 30px;
+  position: fixed;
+  background-color: rgb(178, 44, 44);
+  font-size: 18px;
+  padding: 15px 5px;
+  z-index: 1;
+  transform: translateX(150%);
+}
+.container__adder__error.active {
+  transform: translateX(0);
+  animation: message 0.4s linear;
+}
+@keyframes message {
+  0% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.error__text__up {
+  font-weight: bold;
+  font-size: 16px;
+}
+.error__text__down {
+  font-size: 16px;
+}
+/* CONTAINER__BLOCKS */
+.container__blocks {
+  margin: 15px 0;
+
+  width: 100%;
+  border: 3px solid #4e4e50;
+  border-radius: 10px;
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* CONTAINER__ITEM */
+.container__item {
+  flex: 1 1 auto;
+  border: 2px dashed #6f2232;
+  margin: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 5);
+  border-radius: 7px;
+}
+
+/* GUESS NUMBER */
+.container__randomizer__text {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  position: relative;
+}
+.container__randomizer__regulation {
+  text-transform: lowercase;
+  color: #a3a3a3;
+  font-size: 18px;
+}
+/* GUESS REGULATIONS */
+.guess {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container__number.wrong {
+  color: #d60630;
+}
+.container__number.g {
+  color: green;
+}
+.container__field-text {
+  font-size: 18px;
+  color: #a3a3a3;
+}
+.container__field {
+  width: 200px;
+  font-size: 15px;
+  padding: 6px 10px 4px 10px;
+  border: none;
+  outline: none;
+  background: #4e4e50;
+  border-radius: 8px;
+  margin: 0 15px;
+  color: white;
+}
+
+.container__randomizer__results {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+.win {
+  color: green;
+}
+/* .container__randomizer__results.win {
+  color: green;
+} */
+/* .container__randomizer__results.loss {
+  color: red;
+} */
+.loss {
+  color: red;
+}
+.reset {
+  visibility: hidden;
+}
+.container__default {
+  background-color: #4e4e50;
+  /* background-color: #d60630; */
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 15px;
+}
+.no-correct {
+  background-color: #d60630;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  margin-top: 15px;
+}
+.correct {
+  background-color: green;
+}
+.container__button:disabled {
+  cursor: not-allowed;
+  background-color: #272728;
+}
+.container__field:disabled {
+  background-color: #272728;
+  cursor: not-allowed;
+}

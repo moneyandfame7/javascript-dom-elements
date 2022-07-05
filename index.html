@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+
+        <div class="wrapper__inner">
+            <div class="container">
+
+                <div class="container__clicker">
+                    <div class=container__title>Clicker</div>
+                    <div id="counter" class="container__counter"></div>
+
+                    <div class="container__buttons__together">
+                        <button id="click" class="container__button">Click</button>
+                        <button id="reset" class="container__button">Reset</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="container">
+
+                <div class="container__adder">
+                    <div class="container__adder__inner">
+                        <div class=container__title>Adding blocks</div>
+                        <div class="container__text ">Total block: <span id="counterBlocks">0</span></div>
+                        <button id="add" class="container__button">Add</button>
+                        <button id="delete" class="container__button">Delete</button>
+                        <button id="deleteAll" class="container__button">Delete all</button>
+                    </div>
+
+                    <div class="container__blocks">
+
+
+
+
+
+                    </div>
+                    <div class="container__adder__error" id="error">
+                        <div class="error__text__up">Ошибка: 0</div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="container">
+                <div class="container__randomizer">
+                    <div class="container__randomizer__text">
+                        <h2 class="container__title">Guess the number <span
+                                class="container__randomizer__regulation">from 1 to 100</span></h2>
+
+                    </div>
+
+                    <div class="container__text guess">
+
+
+                        <span class="container__text">
+                            Your numbers:
+                            <span class="container__number wrong" id="guessNumber"></span>
+                        </span>
+
+                        <span class="container__text">
+                            Remaining tries:
+                            <span class="container__number g" id="guessTries">10</span>
+                        </span>
+                    </div>
+
+                    <div class="container__randomizer__inner">
+                        <label for="guessField" class="container__field-text">Enter a guess: </label>
+                        <input id="guessField" type="text" name="" class="container__field" placeholder="Enter number">
+                        <input id="guessSubmit" type="submit" value="Submit guess" class="container__button ">
+                        <input id="guessReset" type="submit" value="RESET" class="container__button reset">
+
+                    </div>
+                    <div class="container__default" id="lowOrHi"></div>
+
+
+                    <div class="container__randomizer__results " id="results">
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div> <!-- wrapper__inner-->
+
+
+    </div> <!-- wrapper -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
